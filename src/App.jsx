@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./styles/app.css"
 import TaskForm from "./component/TaskForm.jsx";
 import TaskEnd from "./component/TaskEnd.jsx";
 import TaskInProgress from "./component/TaskInProgress.jsx";
@@ -35,14 +36,19 @@ function App() {
 
     const handleAdd = (objetTask) => {
         const copyTask = [...todoList];
+
         copyTask.push(objetTask);
         setTodoList(copyTask);
     };
 
     //render
     return (
-        <div>
-            <h1>Ma Todo List</h1>
+        <main>
+            <TaskForm
+                handleAdd={handleAdd}
+            />
+
+            <h1>Tâche(s) encours - {todoList.length}</h1>
             <ul>
                 {todoList.map((todo) => {
                     return <TaskInProgress
@@ -52,11 +58,7 @@ function App() {
                 })}
             </ul>
 
-            <TaskForm
-                handleAdd={handleAdd}
-            />
-
-            <h1>Mes taches terminées</h1>
+            <h1>Terminés</h1>
             <ul>
                 {finish.map((todoEnd) => {
                     return <TaskEnd
@@ -64,7 +66,7 @@ function App() {
                     />
                 })}
             </ul>
-        </div>
+        </main>
     )
 }
 

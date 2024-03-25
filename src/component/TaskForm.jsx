@@ -1,4 +1,5 @@
 import {useState} from "react";
+import "../styles/TaskForm.css"
 
 export default function TaskForm(props){
 
@@ -13,7 +14,6 @@ export default function TaskForm(props){
         const id = new Date().getTime();
         const name = newTask;
         const task = {id : id, name : name};
-        console.log("et");
         handleAdd(task);
         setNewTask("");
     }
@@ -26,7 +26,7 @@ export default function TaskForm(props){
     return (
         <form action="submit" onSubmit={handleSubmit}>
             <input type="text" placeholder={"rajouter une tache"} value={newTask} onChange={handleAddButton}/>
-            <button>+</button>
+            <button className="add-button">+</button>
         </form>
     )
 }

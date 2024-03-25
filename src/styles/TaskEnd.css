@@ -1,0 +1,26 @@
+li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    background: #15101C;
+    width: 700px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.task-finish{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    color: #78CFB0;
+    text-decoration-line: line-through;
+    font-family: Roboto;
+    font-size: 1.7em;
+    font-weight: 400;
+    font-style: normal;
+}

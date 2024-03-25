@@ -1,0 +1,38 @@
+form{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+input{
+    background: none;
+    border: 3px #3E1671 solid;
+    width: 500px;
+    height: 50px;
+    color: #777777;
+    font-size: 1.3em;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: #9E78CF;
+    color: white;
+}
+
+.add-button{
+    background-color: #9E78CF;
+    border-radius: 15px;
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 2.5em;
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: normal;
+    cursor: pointer;
+}
